@@ -113,7 +113,8 @@ button {
 }
 
 button:hover {
-    background:rgb(7, 212, 7);
+    background: linear-gradient(to top left, rgb(22, 232, 85) 30% , rgb(91, 138, 240) 50%);
+
 }
 
 .logo{
@@ -222,7 +223,11 @@ span{
     color:white;
     font-size: 30px;
 }
-.skills_icons{
+
+/* .skill_img{
+   margin-left:100px;
+} */
+ .skills_icons{
     display: flex;
     flex-wrap: wrap;
     gap:20px;
@@ -233,14 +238,17 @@ span{
     font-size: 15px;
     font-weight: italic;
  }
+
 .skills_icons img{
     height:90px;
     width:90px;
-    padding:60px;
+    padding:25px;
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+
+
 .skills_icons img:hover {
     transform: scale(1.2);
 }
@@ -332,6 +340,9 @@ a{
 
 .conc_icons img:hover {
      transform: scale(1.2);
+}
+.foot{
+    text-align: center;
 }
 
 /* ------------------------- */
