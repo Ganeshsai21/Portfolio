@@ -222,11 +222,17 @@ span{
     color:white;
     font-size: 30px;
 }
-
-.skill_img{
-   margin-left:100px;
-}
-
+.skills_icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+ }
+ .skill_img{
+    text-align: center;
+    font-size: 15px;
+    font-weight: italic;
+ }
 .skills_icons img{
     height:90px;
     width:90px;
@@ -235,7 +241,6 @@ span{
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-
 .skills_icons img:hover {
     transform: scale(1.2);
 }
