@@ -444,7 +444,6 @@ a{
 
 @media (max-width: 600px) {
     .navbar {
-        flex-direction: column;
         height: auto;
         padding: 10px;
     }
