@@ -117,7 +117,8 @@ html{
 }
 
 .home-left h1 {
-    font-size: 36px;
+     font-size: 50px;
+    font-weight: bold;
     margin-bottom: 10px;
     background: linear-gradient(to top left, #33ccff 50%, #ff99cc 100%);
     -webkit-background-clip: text;
@@ -155,7 +156,7 @@ button:hover {
 
 }
 
-.logo{
+/* .logo{
     padding:0px 34px;
     height:35px;
     cursor: pointer;
@@ -165,13 +166,34 @@ button:hover {
 
 .logo:hover {
   filter:invert(24%) sepia(88%) saturate(7482%) hue-rotate(195deg) brightness(98%) contrast(101%);
-}
-
+} */
 .yf{
     display: flex;
-    margin-left: 150px;
-    margin-top: -40px;
+     margin-left: 170px;
+     margin-top: -45px;
+    gap:1rem;
+    
 }
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(9, 33, 67);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    color: #3b82f6;
+}
+
 
 a img{
    color:white;
@@ -284,14 +306,18 @@ span{
     justify-content: center;
  }
  .skill_img{
-    text-align: center;
+    
     font-size: 15px;
+    margin-top:-10px;
     font-weight: italic;
  }
-
+ .skill_img p{
+     text-align: center;
+     margin-top: -10px;
+ }
 .skills_icons img{
-    height:90px;
-    width:90px;
+    height:70px;
+    width:70px;
     padding:35px;
     cursor: pointer;
     overflow: hidden;
@@ -402,29 +428,51 @@ span{
 .bo a:hover{
     background: linear-gradient(to top left, rgb(22, 232, 85) 30% , rgb(91, 138, 240) 50%);
 }
+#contact{
+    text-align: center;
+    margin-top: 60px;
+}
 
 #contact p{
-    color:white;
-    text-align: center;
-    font-size: 30px;
+    display: inline-block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.714);
+    width: 85%;
+    color:rgb(255, 255, 255);
+    font-size:30px;
     padding:10px;
     font-weight: 400px;
 }
-
 .conc_img{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
 }
 
-.conc_icons img{
-     height:60px;
-     width:60px;
-     padding:60px;
-     cursor: pointer;
-     overflow: hidden;
-     transition: transform 0.3s ease;
+.conc_icons{
+    display: flex;
+    align-items: center;
+     margin-top: 10px;
+     margin-bottom: 20px;
+    gap:1rem;
+}
+.social-link1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(9, 33, 67);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.social-link1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    color: #3b82f6;
 }
 
 a{
