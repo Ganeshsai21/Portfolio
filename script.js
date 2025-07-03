@@ -23,7 +23,7 @@
       enable: true,
       distance: 150,
       color: "#a27bf8",
-      opacity: 0.3,
+      opacity: 0.11,
       width: 1
     },
     move: {
