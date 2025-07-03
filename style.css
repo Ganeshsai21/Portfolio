@@ -2,28 +2,37 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: rgb(20,45,76);
+    background-color: #0A192F;
     color: white;
+    height:100vh;
 }
+
 html{
     scroll-behavior: smooth;
 }
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind all content */
+}
+
 
 /* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(20,45,76);
+    background-color:#0A192F;
     height: 70px;
     position: relative;
     padding: 0 20px;
 }
 
 .navbar-left h2 {
-    background: linear-gradient(to top left, #33ccff 10%, #ff99cc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:rgba(255, 255, 255, 0.799);
     height: 50px;
     margin:150px;
     padding-top: 20px;
@@ -77,9 +86,12 @@ html{
     /* font-family: sans-serif; */
     /* font-weight: bold; */
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.827);
     position: relative;
     display: inline-block;
+}
+.navbar-right a:hover{
+    color:white;
 }
 
 .navbar-right a::after {
@@ -123,7 +135,20 @@ html{
     background: linear-gradient(to top left, #33ccff 50%, #ff99cc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: slideIn 1.2s ease forwards;
+    opacity: 0;
 }
+@keyframes slideIn {
+    20% {
+        transform: translateX(-60%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 .home-left h3 {
     font-size: 24px;
@@ -191,7 +216,7 @@ button:hover {
 .social-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    color: #3b82f6;
+    /* color: #3b82f6; */
 }
 
 
@@ -245,12 +270,11 @@ a img{
 }
 .box-container {
     flex-wrap: wrap;
-    gap: 100px;
-    padding: 7px 100px;
+    padding: 7px 170px;
 }
 
 .box-container .boxes {
-    background-color: rgb(11,36,71);
+    background-color: rgb(13, 29, 53);
     padding: 6px 15px 9px 7px;
     border-radius: 20px;
     margin-bottom: 37px;
@@ -350,11 +374,11 @@ span{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 100px;
-    padding: 7px 150px;
+    padding: 7px 120px;
 }
 .bo-cont .bo1{
     box-sizing: border-box;
-    background-color: rgb(11,36,71);
+    background-color: rgb(13, 29, 53);
     height:300px;
     padding: 20px;
     border-radius: 30px;
@@ -391,7 +415,7 @@ span{
 
 .bo-cont .bo{
     box-sizing: border-box;
-    background-color: rgb(11,36,71);
+    background-color: rgb(13, 29, 53);
     width:320px;
     height:360px;
     padding: 20px;
@@ -515,7 +539,8 @@ a{
     }
 
     #home {
-        flex-direction: column;
+        display:flex;
+        flex-direction: column-reverse;
         padding: 20px;
         text-align: center;
         height: auto;
@@ -530,6 +555,7 @@ a{
     .home-right img {
         /* width: 60%; */
         margin-top: 20px;
+        top:30%;
     }
 
     .yf {
