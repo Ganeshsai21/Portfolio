@@ -1,15 +1,52 @@
- function toggleMenu() {
-    const menu = document.querySelector('.navbar-right');
-    if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
+const body = document.body;
+const themeDesktop = document.getElementById('theme-toggle-desktop');
+const themeMobile = document.getElementById('theme-toggle-mobile');
+const menu = document.querySelector('.navbar-right');
+function setTheme(isDark) {
+    const iconDesktop = themeDesktop?.querySelector('i');
+    const iconMobile = themeMobile?.querySelector('i');
+    if (isDark) {
+      body.classList.add('dark-mode');
+      iconDesktop?.classList.replace('fa-moon', 'fa-sun');
+      iconMobile?.classList.replace('fa-moon', 'fa-sun');
+      localStorage.setItem('theme', 'dark');
     } else {
-      menu.style.display = 'flex';
-      menu.style.flexDirection = 'column'; // make it stack on small screens
+      body.classList.remove('dark-mode');
+      iconDesktop?.classList.replace('fa-sun', 'fa-moon');
+      iconMobile?.classList.replace('fa-sun', 'fa-moon');
+      localStorage.setItem('theme', 'light');
     }
-      menu.classList.toggle('active');
   }
 
- particlesJS("particles-js", {
+  function toggleTheme() {
+    const isDark = !body.classList.contains('dark-mode');
+    setTheme(isDark);
+  }
+
+  themeDesktop?.addEventListener('click', toggleTheme);
+  themeMobile?.addEventListener('click', toggleTheme);
+
+  // Restore saved theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') setTheme(true);
+
+  // Hamburger toggle
+  function toggleMenu() {
+    menu.classList.toggle('show-menu');
+    const expanded = menu.classList.contains('show-menu');
+    document.querySelector('.menu-icon')?.setAttribute('aria-expanded', expanded);
+  }
+  window.toggleMenu = toggleMenu; // allow inline onclick
+
+  // Close menu on link click (mobile UX)
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('show-menu');
+      document.querySelector('.menu-icon')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  particlesJS("particles-js", {
   particles: {
     number: {
       value: 80,
@@ -39,4 +76,8 @@
   },
   retina_detect: true
 });
+
+
+
+
 
