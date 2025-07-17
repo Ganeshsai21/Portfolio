@@ -60,7 +60,7 @@ html{
   display: flex;
   align-items: center;
   gap: 20px;
-  position: absolute;  /* Makes it look inside navbar */
+  position: fixed;  /* Makes it look inside navbar */
   right: 20px;
   top: 15px;
   background: none;
