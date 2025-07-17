@@ -4,6 +4,8 @@
   --navbar-color: #f8f9fa;
   --card-bg-color: #ffffff;
   --box-text-color: #333;
+  --main-color:linear-gradient(to top, #fefefe 0%, #ace0f9 100%);
+
 }
 
 .dark-mode {
@@ -12,6 +14,7 @@
   --navbar-color: #0A192F;
   --card-bg-color: rgb(13, 29, 53);
   --box-text-color: #aaaaaa;
+  --main-color:#0A192F;
 }
 
 
@@ -188,6 +191,7 @@ button:hover {
 }
 .full-page-section {
   min-height: 100vh;
+  background-image: var(--main-color);
   
 }
 .gradient-text{
