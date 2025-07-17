@@ -4,48 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh-Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9605/9605277.png">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
       <div id="particles-js"></div>
+
     <div class="navbar">
-        <div class="navbar-left">
-             <h2>Ganesh Dasu</h2>
+  <div class="navbar-left">
+    <h2>Ganesh Dasu</h2>
+  </div>
+  <div class="menu-actions">
+    <button id="theme-toggle-mobile"><i class="fa-regular fa-moon"></i></button>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
+</div>
 
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Hamburger -->
+<!-- MENU OUTSIDE NAVBAR -->
+<div class="navbar-right">
+  <a href="#">Home</a>
+  <a href="#home">About</a>
+  <a href="#sect">Education</a>
+  <a href="#skill">Skills</a>
+  <a href="#Projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <button id="theme-toggle-desktop"><i class="fa-regular fa-moon"></i></button>
+  <button onclick="window.open('./assests/ganesh__resume.pdf')"><i class="fa-solid fa-arrow-down"></i> Resume</button>
+</div>
 
-        <div class="navbar-right">
-            <a href="#home">Home
-            </a>
-            <a href="#sect">Education</a>
-            
-            <a href="#skill">Skills</a>
-            <a href="#Projects" target="blank">Projects</a>
-            <a href="#contact">Contact</a>
-            <button onclick="window.open('./assests/ganesh__resume.pdf')">Resume</button>
-        </div>
-        </div>
-    </div>
-    <div id="home">
-        <div class="home-left">
-            <h3>Hello I'M</h3>
-            <h1 class="text" >GANESH DASU</h1>
-            <!-- <h3>And I'm a <span style="color:#ff004f">Frontend Developer</span></h3> -->
-           <p class="text">
-            I’m a Computer Science student with a strong interest in full-stack development.I enjoy building web applications that are not just functional but also smooth, user-friendly, and meaningful.I love solving real-world problems through code and constantly look for ways to improve and grow.Turning ideas into reality and creating things that make a difference is what keeps me motivated.<br>
-             
-            <i class="fa-solid fa-location-dot"></i>&nbsp;<i>Warangal,Telangana,India</i>
-          </p>
-             
-             
-           <!-- <a href = "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
-           Download = "test_image"> -->
-           <!-- <button type="button" onclick="window.open('./assests/ganesh__resume.pdf')">Download CV</button> -->
-
-          <div class="yf">
+      <div class="px-4 py-5 mt-15 text-center full-page-section d-flex flex-column justify-content-center align-items-center"> 
+        <h1 class="display-3 fw-bold text-body-emphasis gradient-text">Hi, I'm Ganesh Dasu</h1> 
+        <div class="col-lg-6 mx-auto"> 
+          <p class="lead mb-4">Computer Science Student & Web Developer</p> 
+        </div> 
+        <div class="yf">
           <a href="https://github.com/ganeshsai21" target="_blank" class="social-link">
             <i class="fab fa-github"></i>
            </a>
@@ -57,6 +53,19 @@
             </a>
             
           </div>
+      </div> 
+      
+    <div id="sect">
+        <p>ABOUT ME!</p>
+    </div>
+    
+    <div id="home">
+        <div class="home-left">
+           <p class="text">
+            I’m a Computer Science student with a strong interest in full-stack development.I enjoy building web applications that are not just functional but also smooth, user-friendly, and meaningful.I love solving real-world problems through code and constantly look for ways to improve and grow.Turning ideas into reality and creating things that make a difference is what keeps me motivated.<br>
+            </p>
+            <i class="fa-solid fa-location-dot"></i>&nbsp;<i>Warangal,Telangana,India</i><br><br>
+            <i class="fa-solid fa-envelope"></i></i>&nbsp;<i>ganeshdasu123@gmail.com</i>
         </div>
         <div class="home-right">
             <img
@@ -71,42 +80,53 @@
         </div>  
     </div>
 
-    <div class="homw">
-    <a href="" >Home</a>
-    </div>
     <div id="sect">
         <p>EDUCATION</p>
     </div>
         
-    <div class="box-container">
-        <div class="boxes">
-            <!-- <h3>Graduated from<br></h3> -->
-            <h3>&nbsp;&nbsp;SR university </h3>
-            <h4>&nbsp;&nbsp;&nbsp;B.Tech - Computer Science and Engineering</h4>
-            &nbsp;&nbsp;&nbsp;Year:2022-2026 <br><br> 
-            &nbsp;&nbsp; Cgpa-9.0
-        </div>
-    
-        <div class="boxes">
-            <!-- <h2>Intermediate<br></h2> -->
-            <h3>&nbsp;&nbsp;Alphores Junior College</h3>
-            <h4>&nbsp;&nbsp;&nbsp;Board of Intermediate Education</h4>
-            &nbsp;&nbsp;&nbsp;Year:2020-2022 <br><br> &nbsp;&nbsp;&nbsp;Cgpa-95.0
-        </div>
-        <div class="boxes">
-            <!-- <h2>School from<br></h2> -->
-            <h3>&nbsp;&nbsp;Vani Vidyaniketan High School</h3>
-            <h4>&nbsp;&nbsp;&nbsp;Secondary School Education</h4>
-            &nbsp;&nbsp;&nbsp;Year:2020 <br><br> &nbsp;&nbsp;&nbsp;Cgpa-10.0
-        </div>
-       
+      <div class="box-container">
+  <div class="boxes shadow p-4 mb-5">
+    <h4>B.Tech - Computer Science and Engineering</h4>
+    <p><i class="fa-solid fa-building-columns"></i> <span>&nbsp;SR University</span></p>
+
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> Year: 2022–2026
+    </p>
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> <strong>CGPA:</strong> 9.0
+    </p>
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> <em>Relevant Coursework</em> – <em>OOPs,DBMS,OS</em>
+    </p>
+    </div>
+    <div class="boxes shadow p-4 mb-5">
+    <h4>Board of Intermediate Education</h4>
+    <p><i class="fa-solid fa-building-columns"></i> <span>&nbsp;Alphores Junior College</span></p>
+
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> Year: 2020–2022
+    </p>
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> <strong>CGPA:</strong> 10.0
+    </p>
+    </div>
+    <div class="boxes shadow p-4 mb-5">
+    <h4>Secondary School Education</h4>
+    <p><i class="fa-solid fa-building-columns"></i> <span>&nbsp;Vani Vidyaniketan High School</span></p>
+
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> Year: 2020
+    </p>
+    <p class="edu-detail">
+      <i class="fa-solid fa-circle small-icon"></i> <strong>CGPA:</strong> 10.0
+    </p>
+    </div>
     </div>
     <div id="skill">
-        <p><span>SKILLS</span></p>
-        <!-- <p id="pr">Programming Languages</p> -->
+        <p>SKILLS</p>
     </div>
-        
-   <div class="skill_img">
+
+<div class="skill_img">
   <div class="skills_icons">
     <div class="skill_item">
       <img src="/assests/python.png" alt="Python" class="zoom-img">
@@ -147,7 +167,7 @@
         <p>PROJECTS</p>
     </div>
     <div class="bo-cont">
-      <div class="bo1">
+      <div class="bo1 shadow p-4 mb-5">
             <h2>TASKFLOW!</h2>
             <p>
               TaskFlow is a fully functional task management web application that helps users organize their personal and work-related tasks efficiently. It allows individuals to securely sign up and manage their own set of tasks, with the ability to add, edit, delete, and mark them as completed. Users can filter tasks by status, priority, or category, and see real-time summaries like total, completed, active, and high-priority tasks. The application is optimized for both desktop and mobile, offering a smooth experience with a slide-out drawer on smaller screens for quick access to filters and stats. The design emphasizes simplicity, responsiveness, and ease of use while ensuring all data remains private and tied to the authenticated user.<br>
@@ -157,20 +177,20 @@
             <br>
             <a href="https://taskflowad.netlify.app/" target="_blank">Show</a>
         </div>
-        <div class="bo">
-            <h2>Weather Application</h2>
+        <div class="bo shadow p-4 mb-5">
+            <h3>Weather Application</h3>
             <p>This Application is responsible for showing all the Weather parameters like Temperature, Weather description, Wind Speed, Humidity, Max and Min Temperatures and Pressure when we search for a City</p>
             <br>
             <a href="/assests/tic tac toe/Weather App/index2.html">Show</a>
         </div>
-        <div class="bo">
-            <h2>Tic Tac Toe Game</h2>
+        <div class="bo shadow p-4 mb-5">
+            <h3>Tic Tac Toe Game</h3>
             <p>A classic 2-player game built using HTML,CSS,JavaScript featuring a clean user interface and interactive gameplay. Designed with game logic to detect win, draw, and invalid moves. This project demonstrates my understanding of control structures, UI design, and event-driven programming.</p>
             <br>
             <a href="/assests/tic tac toe/index1.html">Show</a>
         </div>
-        <div class="bo">
-            <h2>Simple Blog Aplication</h2>
+        <div class="bo shadow p-4 mb-5">
+            <h3>Simple Blog App</h3>
             <p>A blog application form is a form that is used to collect information from individuals who are interested in creating a blog on a particular platform. Additionally, the form may ask for more specific information related to the blog, such as the desired blog title, URL, and a brief description.</p>
             <br>
             <a href="/assests/tic tac toe/Weather App/blog website/index3.html">Show</a>
@@ -204,6 +224,11 @@
     <p>&copy;&nbsp;Made By &nbsp;<span id="k">Ganesh Dasu</span></p>
     </div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+
+
+       
+
 </body>
 </html>
