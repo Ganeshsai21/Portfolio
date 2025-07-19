@@ -1,5 +1,5 @@
 const body = document.body;
-const themeDesktop = document.getElementById("theme-toggle-desktop ");
+const themeDesktop = document.getElementById("theme-toggle-desktop");
 const themeMobile = document.getElementById("theme-toggle-mobile");
 const menu = document.querySelector(".navbar-right");
 window.addEventListener("load", function () {
