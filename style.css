@@ -5,16 +5,17 @@
   --card-bg-color: #ffffff;
   --box-text-color: #333;
   --main-color:linear-gradient(to top, #fefefe 0%, #ace0f9 100%);
-
+  --shadow-color:rgba(209, 17, 17, 0.1);
 }
 
 .dark-mode {
   --bg-color: #0A192F;
   --text-color: #ffffff;
   --navbar-color: #0A192F;
-   --card-bg-color: #1f2937;
+  --card-bg-color: #1f2937;
   --box-text-color: #aaaaaa;
   --main-color:#0A192F;
+  --shadow-color:rgba(251, 237, 237, 0.412);
 }
 
 
@@ -31,6 +32,48 @@ body {
 html{
     scroll-behavior: smooth;
 }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.preloader-content {
+  display: flex;
+  flex-direction: column; /* Stack loader and text vertically */
+  align-items: center;
+}
+
+
+/* Loader animation (circle) */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#preloader p{
+    margin-top: 20px;
+    background: linear-gradient(to top left, #1463f5 60%, #0590f4 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 #particles-js {
   position: fixed;
   top: 0;
@@ -39,6 +82,7 @@ html{
   height: 100%;
   z-index: -1; /* behind all content */
 }
+
 
 
 /* Navbar Styling */
@@ -163,7 +207,7 @@ html{
     content: '';
     width: 0;
     height: 3px;
-   background: linear-gradient(to top left, #1463f5 60%, #0590f4 75%);
+   background: linear-gradient(to top left, #1463f5 30%, #0590f4 85%);
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -192,7 +236,6 @@ button:hover {
 .full-page-section {
   min-height: 100vh;
   background-image: var(--main-color);
-  
 }
 .gradient-text{
      background: linear-gradient(to top left, #1463f5 60%, #0590f4 75%);
@@ -229,7 +272,7 @@ button:hover {
     border-radius: 50%;
     color: var(--text-color);
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
     transition: all 0.3s ease;
 }
 .social-link:hover {
@@ -296,8 +339,8 @@ a img{
 }
 
 .home-right img {
-    width: 300px;
-    height: 325px;
+    width: 270px;
+    height: 280px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 3px 2px 6px #aaaaaa;
@@ -335,7 +378,9 @@ a img{
     overflow: hidden;
 }
 span{
-    color:blue;
+     background: linear-gradient(to top left, #1463f5 60%, #0590f4 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 17px;
 }
 .small-icon {
@@ -457,7 +502,7 @@ span{
     text-align: justify;
     height:300px;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 15px;
      margin:5px;
     overflow: hidden;
     cursor:pointer;
@@ -499,7 +544,7 @@ span{
     margin:5px;
     overflow: hidden;
     cursor:pointer;
-    border-radius: 30px;
+    border-radius: 15px;
     transition: transform 0.3s ease;
 
 }
