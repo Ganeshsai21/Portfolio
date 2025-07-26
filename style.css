@@ -31,6 +31,7 @@ body {
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 #preloader {
   position: fixed;
@@ -80,7 +81,8 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* behind all content */
+  z-index: 2; /* behind all content */
+  pointer-events: none;
 }
 
 
@@ -92,9 +94,9 @@ html{
   justify-content: space-between;
   position: fixed;
   background-color: var(--navbar-color);
-  height: 70px;
+  height: 60px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .navbar-left h2 {
@@ -280,8 +282,21 @@ button:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     /* color: #3b82f6; */
 }
+#home{
+    text-align: center;
+}
+
+
+#home p{
+    display: inline-block;
+    border-bottom: 2px solid var(--text-color);;
+    width: 85%;
+   color: var(--text-color);
+    font-size: 35px;
+    padding:10px;
+}
 /* Home Section */
-#home {
+.home {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -666,7 +681,7 @@ a{
         padding: 10px 0;
     }
 
-    #home {
+    .home {
         display:flex;
         flex-direction: column-reverse;
         padding: 20px;
